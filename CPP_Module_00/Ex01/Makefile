@@ -6,7 +6,7 @@
 #    By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/20 05:57:08 by aben-chr          #+#    #+#              #
-#    Updated: 2025/07/20 06:16:35 by aben-chr         ###   ########.fr        #
+#    Updated: 2025/07/20 06:21:08 by aben-chr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,8 @@ FILES = main \
 		
 F_HEADERS = PhoneBook \
 		Contact \
+
+RM = rm -rf
 
 SRC = ${FILES:=.cpp}
 OBJS = ${FILES:=.o}
@@ -41,15 +43,15 @@ $(NAME) : $(OBJS) $(HEADERS)
 
 %.o: %.cpp $(HEADER)
 	@printf "$(BLACK) 	- Making object file $(notdir $@) from source file $(notdir $<): OK! $(RESET)\n"
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@ $(RM) $(OBJ)
+	@ $(RM) $(OBJS)
 	@printf "$(BLACK)	- Removing object files ... $(RESET)\n"
 	@printf "$(PINK)    - Object files removed.$(RESET)\n"
 
 fclean: clean
-	@ $(RM) $(NAME)
+	@ $(RM) $(NAME) 
 	@printf "$(BLACK)	- Removing $(NAME) ... $(RESET)\n"
 	@printf "$(PINK)    - Executable removed.$(RESET)\n"
 
