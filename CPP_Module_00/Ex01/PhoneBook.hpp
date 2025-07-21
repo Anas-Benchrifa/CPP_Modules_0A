@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 18:33:57 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/07/21 07:44:11 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/07/21 12:44:26 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 #define XGRN 	"\e[1;32m"
 #define _MAG_ 	"\e[1;36m"
 #define BLOOD 	"\e[4;31m"
+#define KING	44
 #define _ZERO_	0
 #define _ONE_	1
 #define _TWO_	2

@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 03:38:26 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/07/21 09:00:54 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/07/21 11:26:00 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,20 +90,63 @@ void	PhoneBook::ADD(PhoneBook &phonebook)
 	std::cout << YEL << "Inter Contact Information" << EOFC << endl;
 	std::cout << endl;
 	
-	std::cout << BLUE << "First Name" << EOFC;
-	std::cout << XBLU << ": " << EOFC;
-	getline(cin , Info[_ZERO_]);
-	std::cout << BLUE << "Last Name" << EOFC;
-	std::cout << XBLU << ": " << EOFC;
-	getline(cin, Info[_ONE_]);
-	std::cout << BLUE << "Nikename" << EOFC;
-	std::cout << XBLU << ": " << EOFC;
-	getline(cin, Info[_TWO_]);
+	while (true)
+	{
+		std::cout << BLUE << "First Name" << EOFC;
+		std::cout << XBLU << ": " << EOFC;
+		getline(cin , Info[_ZERO_]);
+		if (Info[_ZERO_].empty())
+		{
+			std::cout << BLOOD << "\nError" EOFC;
+			std::cout << _BLOOD_ ":" EOFC << EOFC;
+			std::cout << " Empty Input\n" << endl;
+			continue;
+		}
+		break;
+	}
+	
+	// Get Last Name with its own loop
+	while (true)
+	{
+		std::cout << BLUE << "Last Name" << EOFC;
+		std::cout << XBLU << ": " << EOFC;
+		getline(cin, Info[_ONE_]);
+		if (Info[_ONE_].empty())
+		{
+			std::cout << BLOOD << "\nError" EOFC;
+			std::cout << _BLOOD_ ":" EOFC << EOFC;
+			std::cout << " Empty Input\n" << endl;
+			continue;
+		}
+		break;
+	}
+	
+	while (true)
+	{
+		std::cout << BLUE << "Nikename" << EOFC;
+		std::cout << XBLU << ": " << EOFC;
+		getline(cin, Info[_TWO_]);
+		if (Info[_TWO_].empty())
+		{
+			std::cout << BLOOD << "\nError" EOFC;
+			std::cout << _BLOOD_ ":" EOFC << EOFC;
+			std::cout << " Empty Input\n" << endl;
+			continue;
+		}
+		break;
+	}
 	
 	do {
 		std::cout << BLUE <<"Phone Number" << EOFC;
 		std::cout << XBLU << ": " << EOFC;
 		getline(cin, Info[_THREE_]);
+		if (Info[_THREE_].empty())
+		{
+			std::cout << BLOOD << "\nError" EOFC;
+			std::cout << _BLOOD_ ":" EOFC << EOFC << endl;
+			std::cout << " Empty Input\n" << endl;
+			continue;
+		}
 		if (!ScanInputThree(Info[_THREE_]))
 			break;
 		std::cout << BLOOD << "ERROR" << " " << EOFC;
@@ -112,10 +155,20 @@ void	PhoneBook::ADD(PhoneBook &phonebook)
 		std::cout << "Inter Numbers Only" << endl;
 	} while (ScanInputThree(Info[_THREE_]));
 
-	std::cout << BLUE << 
-	"Darkest Secret" << EOFC;
-	std::cout << XBLU << ": " << EOFC;
-	getline(cin, Info[_FOUR_]);
+	while (true)
+	{
+		std::cout << BLUE << "Darkest Secret" << EOFC;
+		std::cout << XBLU << ": " << EOFC;
+		getline(cin, Info[_FOUR_]);
+		if (Info[_FOUR_].empty())
+		{
+			std::cout << BLOOD << "\nError" EOFC;
+			std::cout << _BLOOD_ ":" EOFC << EOFC << endl;
+			std::cout << " Empty Input\n" << endl;
+			continue;
+		}
+		break;
+	}
 	phonebook.AddContact(Info);
 	std::cout << endl <<GRN "Contact Added Successfully" EOFC;
 	std::cout << XGRN "!" EOFC << endl;
