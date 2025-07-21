@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 03:38:26 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/07/21 12:56:52 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/07/21 13:04:37 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,7 +143,7 @@ void	PhoneBook::ADD(PhoneBook &phonebook)
 		if (Info[_THREE_].empty())
 		{
 			std::cout << BLOOD << "\nError" EOFC;
-			std::cout << _BLOOD_ ":" EOFC << EOFC << std::endl;
+			std::cout << _BLOOD_ ":" EOFC << EOFC;
 			std::cout << " Empty Input\n" << std::endl;
 			continue;
 		}
