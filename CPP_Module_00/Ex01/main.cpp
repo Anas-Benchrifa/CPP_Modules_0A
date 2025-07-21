@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 03:47:58 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/07/21 07:44:33 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/07/21 12:51:57 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 std::string	CheckInput(std::string Input)
 {
-	getline(cin, Input);
+	std::getline(cin, Input);
 	if (std::cin.eof())
 		exit(1);
 	return (Input);
