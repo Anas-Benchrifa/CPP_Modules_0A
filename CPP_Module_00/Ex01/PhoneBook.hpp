@@ -6,14 +6,13 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 18:33:57 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/07/20 05:51:23 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/07/21 07:44:11 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "Contact.hpp"
-using namespace std;
 
 #define VIOLET	"\e[4;1;38;2;128;0;255m"
 #define XVIOLET	"\e[1;38;2;128;0;255m"
@@ -48,4 +47,6 @@ class PhoneBook
 		void	AddContact(string info[5]);
 		void	DisplayContact(int Search) const;
 		void	DisplayPhoneBook(void) const;
+		void	ADD(PhoneBook &phonebook);
+		int		SEARCH(PhoneBook &phonebook);
 };

@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 01:51:56 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/07/19 06:02:39 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/07/21 07:21:03 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ class Contact
 		const	string&	get_phonenumber_(void) const;
 		const	string&	get_darkestsecret_(void) const;
 	private:
-		string	first_name;
-		string	last_name;
-		string	nick_name;
-		string	phone_number;
-		string	darkest_secret;
+		std::string	first_name;
+		std::string	last_name;
+		std::string	nick_name;
+		std::string	phone_number;
+		std::string	darkest_secret;
 };

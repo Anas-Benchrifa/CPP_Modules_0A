@@ -6,14 +6,14 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 02:01:11 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/06/16 02:03:27 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/07/21 07:30:13 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 void	Contact::set_firstname_(string F_name) {
-	this->first_name = F_name;
+	first_name = F_name;
 }
 
 void	Contact::set_lastname_(string L_name) {
@@ -49,5 +49,5 @@ const	string&	Contact::get_phonenumber_(void) const {
 }
 
 const	string&	Contact::get_darkestsecret_(void) const {
-	return (this->darkest_secret);
+	return (darkest_secret);
 }
