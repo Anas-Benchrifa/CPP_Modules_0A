@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 03:38:26 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/07/21 13:04:37 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/07/21 14:54:10 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,13 @@ static void	DisplayInfo(std::string input)
 	unsigned int index;
 
 	index  = 0;
+	while (!input.empty())
+	{
+		if (input[index] == ' ' || input[index] == '\t')
+			index++;
+		else
+			break;
+	}
 	if (input.length() > 10)
 		cout << input.substr(0, 9) + ".";
 	else
@@ -95,6 +102,8 @@ void	PhoneBook::ADD(PhoneBook &phonebook)
 		std::cout << BLUE << "First Name" << EOFC;
 		std::cout << XBLU << ": " << EOFC;
 		std::getline(cin , Info[_ZERO_]);
+		if (std::cin.eof())
+			return ;
 		if (Info[_ZERO_].empty())
 		{
 			std::cout << BLOOD << "\nError" EOFC;
@@ -111,6 +120,8 @@ void	PhoneBook::ADD(PhoneBook &phonebook)
 		std::cout << BLUE << "Last Name" << EOFC;
 		std::cout << XBLU << ": " << EOFC;
 		std::getline(cin, Info[_ONE_]);
+		if (std::cin.eof())
+			return ;
 		if (Info[_ONE_].empty())
 		{
 			std::cout << BLOOD << "\nError" EOFC;
@@ -126,6 +137,8 @@ void	PhoneBook::ADD(PhoneBook &phonebook)
 		std::cout << BLUE << "Nikename" << EOFC;
 		std::cout << XBLU << ": " << EOFC;
 		std::getline(cin, Info[_TWO_]);
+		if (std::cin.eof())
+			return ;
 		if (Info[_TWO_].empty())
 		{
 			std::cout << BLOOD << "\nError" EOFC;
@@ -140,6 +153,8 @@ void	PhoneBook::ADD(PhoneBook &phonebook)
 		std::cout << BLUE <<"Phone Number" << EOFC;
 		std::cout << XBLU << ": " << EOFC;
 		std::getline(cin, Info[_THREE_]);
+		if (std::cin.eof())
+			return ;
 		if (Info[_THREE_].empty())
 		{
 			std::cout << BLOOD << "\nError" EOFC;
@@ -160,10 +175,12 @@ void	PhoneBook::ADD(PhoneBook &phonebook)
 		std::cout << BLUE << "Darkest Secret" << EOFC;
 		std::cout << XBLU << ": " << EOFC;
 		std::getline(cin, Info[_FOUR_]);
+		if (std::cin.eof())
+			return ;
 		if (Info[_FOUR_].empty())
 		{
 			std::cout << BLOOD << "\nError" EOFC;
-			std::cout << _BLOOD_ ":" EOFC << EOFC << std::endl;
+			std::cout << _BLOOD_ ":" EOFC << EOFC;
 			std::cout << " Empty Input\n" << std::endl;
 			continue;
 		}
@@ -182,6 +199,9 @@ int	PhoneBook::SEARCH(PhoneBook &phonebook)
 	phonebook.DisplayPhoneBook();
 	std::cout << "\n" << YEL "Enter Index:" EOFC << " ";
 	std::getline(cin, input);
+	if (std::cin.eof()) {
+		return (_ZERO_);
+	}
 	if (input.empty()) {
 		std::cout << BLOOD "\nError" EOFC _BLOOD_ ":" EOFC;
 		std::cout << "Empty Input (Enter Between 0-7)" << std::endl;
