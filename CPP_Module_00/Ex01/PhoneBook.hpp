@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 18:33:57 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/07/21 12:44:26 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/13 23:01:03 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #define VIOLET	"\e[4;1;38;2;128;0;255m"
 #define XVIOLET	"\e[1;38;2;128;0;255m"
-#define EOFC	"\001\033[0;0m\002" 
+#define EOFC	"\001\033[0;0m\002"
 #define _BLOOD_	"\e[38;5;1m"
 #define GREEN	"\033[0;92m"
 #define BLUE 	"\e[4;1;34m"
