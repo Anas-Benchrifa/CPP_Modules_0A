@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 22:08:54 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/15 23:46:59 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/17 23:07:21 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,9 @@ int main(int argc, char **argv)
 	while (getline(istream, line))
 	{
 		Replace(line, s1, s2);
-		ostream << line << std::endl;
+		std::cout << line;
+		if (!istream.eof())
+			std::cout << std::endl;
 	}
 	
 	istream.close();

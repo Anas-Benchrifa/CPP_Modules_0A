@@ -6,31 +6,24 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 19:11:43 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/12 01:38:39 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/17 23:01:47 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "zombieHorde.hpp"
+#include <iostream>
 
-std::string	ZombieHorde::RandomNames[9] = {
-	"Anas",
-	"Moead",
-	"Ayoub",
-	"hassan",
-	"Ma9la",
-	"Zero",
-	"The-King",
-	"Hassan-three",
-	"Life"
-};
 
-ZombieHorde::ZombieHorde(int Size)
-{
-	srand((unsigned int)time(NULL));
-	this->zombies = new Zombie[Size];
-	for (int x = 0; x < Size; x++)
-		this->zombies[x].SetName(this->RandomNames[rand() % 9]);
-	this->size = Size;
+ZombieHorde::ZombieHorde(int Size, std::string name)
+{	
+	try {
+		this->zombies = new Zombie[Size];
+		for (int x = 0; x < Size; x++)
+			this->zombies[x].SetName(name);
+		this->size = Size;
+	} catch (const std::bad_alloc& e) {
+		std::cout << "Error: Failed to Allocate." << std::endl;
+	}
 }
 
 ZombieHorde::~ZombieHorde() {
