@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/22 00:41:52 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/22 23:48:12 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,29 +24,22 @@
  */
 bool bsp(Point const a, Point const b, Point const c, Point const point) {
 	
-	// Calculate the cross products to determine orientation
-	// We'll use the formula: (B - A) × (P - A) to determine which side of edge AB point P is on
+	/* Calculate the cross products to determine orientation
+		We'll use the formula: (B - A) × (P - A) to determine which side of edge AB point P is on */
 	
-	// Vector AB = B - A
+	/* Vector AB = B - A */
 	Fixed abx = b.getX() - a.getX();
 	Fixed aby = b.getY() - a.getY();
-	
-	// Vector AC = C - A  
+
 	Fixed acx = c.getX() - a.getX();
 	Fixed acy = c.getY() - a.getY();
-	
-	// Vector AP = P - A
+
 	Fixed apx = point.getX() - a.getX();
 	Fixed apy = point.getY() - a.getY();
 	
-	// Calculate cross products
-	// Cross product of AB and AP: AB × AP = abx * apy - aby * apx
+	/* Like: abx.operator*(apy); */
 	Fixed cross1 = abx * apy - aby * apx;
-	
-	// Cross product of AC and AP: AC × AP = acx * apy - acy * apx
 	Fixed cross2 = acx * apy - acy * apx;
-	
-	// Cross product of AB and AC: AB × AC = abx * acy - aby * acx
 	Fixed cross3 = abx * acy - aby * acx;
 	
 	// Check if the point is on the same side of all edges
