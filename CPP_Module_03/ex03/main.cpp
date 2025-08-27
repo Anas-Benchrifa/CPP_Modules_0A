@@ -5,90 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/01 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/24 09:09:49 by aben-chr         ###   ########.fr       */
+/*   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             */
+/*   Updated: 2025/08/27 11:31:13 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
-#include <iostream>
 
 int main() {
-	std::cout << "\n*** Testing ClapTrap ***" << std::endl;
-	ClapTrap a;
-	ClapTrap b("Cody");
+	DiamondTrap a;
+	DiamondTrap b("Diamond");
 
 	a.attack("some other ClapTrap");
-	a.takeDamage(10);
-	a.takeDamage(10);
-	a.beRepaired(5);
-	a.attack("some other ClapTrap");
+	a.takeDamage(50);
+	a.beRepaired(10);
+	a.guardGate();
+	a.highFivesGuys();
+	a.whoAmI();
 	
 	b.attack("some other ClapTrap");
-	b.beRepaired(3);
-	
-	std::cout << "\n*** Testing ScavTrap ***" << std::endl;
-	ScavTrap c;
-	ScavTrap d("Scavvy");
-
-	c.attack("some other ClapTrap");
-	c.takeDamage(50);
-	c.beRepaired(10);
-	c.guardGate();
-	
-	d.attack("some other ClapTrap");
-	d.guardGate();
-	d.takeDamage(30);
-	d.beRepaired(5);
-	
-	std::cout << "\n*** Testing FragTrap ***" << std::endl;
-	FragTrap e;
-	FragTrap f("Fragster");
-
-	e.attack("some other ClapTrap");
-	e.takeDamage(50);
-	e.beRepaired(10);
-	e.highFivesGuys();
-	
-	f.attack("some other ClapTrap");
-	f.highFivesGuys();
-	f.takeDamage(30);
-	f.beRepaired(5);
-	
-	std::cout << "\n*** Testing DiamondTrap ***" << std::endl;
-	DiamondTrap g;
-	DiamondTrap h("Diamond");
-
-	g.attack("some other ClapTrap");
-	g.takeDamage(50);
-	g.beRepaired(10);
-	g.guardGate();
-	g.highFivesGuys();
-	g.whoAmI();
-	
-	h.attack("some other ClapTrap");
-	h.guardGate();
-	h.highFivesGuys();
-	h.takeDamage(30);
-	h.beRepaired(5);
-	h.whoAmI();
-	
-	std::cout << "\n*** Testing Copy Constructor and Assignment ***" << std::endl;
-	DiamondTrap i(h);
-	i.attack("copy target");
-	i.guardGate();
-	i.highFivesGuys();
-	i.whoAmI();
-	
-	DiamondTrap j;
-	j = i;
-	j.attack("assigned target");
-	j.guardGate();
-	j.highFivesGuys();
-	j.whoAmI();
+	b.guardGate();
+	b.highFivesGuys();
+	b.takeDamage(30);
+	b.beRepaired(5);
+	b.whoAmI();
 	
 	return 0;
 }

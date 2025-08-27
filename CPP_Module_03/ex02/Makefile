@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+     #
 #   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        #
 #                                                 +#+#+#+#+#+   +#+           #
-#   Created: 2024/11/01 12:01:07 by aben-chr          #+#    #+#             #
+#   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             #
 #   Updated: 2025/08/22 23:48:12 by aben-chr         ###   ########.fr       #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = FragTrap
+NAME = ScavTrap
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRCS = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
+SRCS = ClapTrap.cpp ScavTrap.cpp main.cpp
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -rf
 
