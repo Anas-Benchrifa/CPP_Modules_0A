@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/27 11:52:49 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/28 11:20:10 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,4 @@ class FragTrap : virtual public ClapTrap {
 		FragTrap& operator=(const FragTrap& other);
 		
 		void highFivesGuys(void);
-		
-		void attack(const std::string& target);
 };
