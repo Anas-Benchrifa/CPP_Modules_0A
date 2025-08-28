@@ -6,12 +6,13 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/27 11:31:13 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/28 11:00:21 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include <cstdlib>
 #include <iostream>
 
 int main() {
@@ -39,6 +40,9 @@ int main() {
 	
 	d.attack("some other ClapTrap");
 	d.guardGate();
+	d.guardGate(); // Try to enter gate keeper mode again
+	d.stopGuardingGate();
+	d.guardGate(); // Enter gate keeper mode again
 	d.takeDamage(30);
 	d.beRepaired(5);
 	
@@ -49,6 +53,7 @@ int main() {
 	
 	ScavTrap f;
 	f = e;
+	exit(0);
 	f.attack("assigned target");
 	f.guardGate();
 	

@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/28 11:12:41 by aben-chr         ###   ########.fr       */
+/*   Created: 2025/08/27 13:41:35 by aben-chr          #+#    #+#             */
+/*   Updated: 2025/08/27 14:39:19 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Animal.hpp"
+#include <iostream>
 
-#include "ClapTrap.hpp"
+Animal::Animal() {
+	std::cout << "Default Constructor Called From (Animal)" << std::endl;
+}
 
-class FragTrap : public ClapTrap {
-	public:
-		FragTrap();
-		FragTrap(const std::string& name);
-		FragTrap(const FragTrap& other);
-		~FragTrap();
-		
-		FragTrap& operator=(const FragTrap& other);
-		
-		void highFivesGuys(void);
-};
+Animal::~Animal() {
+	std::cout << "Destructor Called From (Animal)" << std::endl;
+}
+
+Animal::Animal(const Animal& other) {
+	
+}

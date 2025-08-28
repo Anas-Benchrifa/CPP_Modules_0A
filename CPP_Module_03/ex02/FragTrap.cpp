@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/27 11:31:13 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/28 11:17:56 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,20 +43,16 @@ FragTrap& FragTrap::operator=(const FragTrap& other) {
 	return *this;
 }
 
-void FragTrap::attack(const std::string& target) {
+void FragTrap::highFivesGuys(void) {
 	if (hitPoints == 0) {
-		std::cout << "FragTrap " << name << " is dead and cannot attack!" << std::endl;
+		std::cout << "FragTrap " << name << " is dead and cannot request high fives!" << std::endl;
 		return;
 	}
 	if (energyPoints == 0) {
-		std::cout << "FragTrap " << name << " has no energy points left to attack!" << std::endl;
+		std::cout << "FragTrap " << name << " has no energy points left to request high fives!" << std::endl;
 		return;
 	}
 	
-	energyPoints--;
-	std::cout << "FragTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
-}
-
-void FragTrap::highFivesGuys(void) {
+	energyPoints--; // High fiving costs energy
 	std::cout << "FragTrap " << name << " requests a positive high five!" << std::endl;
 }

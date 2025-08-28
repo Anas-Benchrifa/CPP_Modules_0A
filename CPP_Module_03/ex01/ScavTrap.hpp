@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/27 11:51:45 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/28 11:20:47 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap {
+	private:
+		bool isGuardingGate;
 	
 	public:
 		ScavTrap();
@@ -25,6 +27,8 @@ class ScavTrap : public ClapTrap {
 		ScavTrap& operator=(const ScavTrap& other);
 		
 		void guardGate();
+		void stopGuardingGate();
+		bool isInGateKeeperMode() const;
 		
 		void attack(const std::string& target);
 };
