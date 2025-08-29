@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/28 11:04:16 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/29 12:43:27 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ void ScavTrap::guardGate() {
 		return;
 	}
 	
-	energyPoints--;
 	isGuardingGate = true;
 	std::cout << "ScavTrap " << name << " is now in Gate keeper mode." << std::endl;
 }

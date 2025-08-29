@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/27 11:52:38 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/29 12:45:20 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,4 @@ class DiamondTrap : public ScavTrap, public FragTrap {
 		DiamondTrap& operator=(const DiamondTrap& other);
 
 		void whoAmI();
-
-		using ScavTrap::attack;
 };

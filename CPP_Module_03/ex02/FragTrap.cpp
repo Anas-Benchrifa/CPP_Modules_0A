@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 12:01:07 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/28 11:17:56 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/29 12:43:11 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,5 @@ void FragTrap::highFivesGuys(void) {
 		return;
 	}
 	
-	energyPoints--; // High fiving costs energy
 	std::cout << "FragTrap " << name << " requests a positive high five!" << std::endl;
 }
