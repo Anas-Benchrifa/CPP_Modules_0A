@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/29 11:33:51 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/29 15:50:21 by aben-chr         ###   ########.fr       */
+/*   Created: 2025/08/29 13:29:38 by aben-chr          #+#    #+#             */
+/*   Updated: 2025/08/30 12:10:53 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class Cat : public Animal {
+class Dog : public Animal {
+	private:
+		Brain*	Brains;
 	public:
-		Cat();
-		~Cat();
-		Cat(const Cat& other);
-		Cat& operator=(const Cat& other);
-
+		Dog();
+		~Dog();
+		Dog(const Dog& other);
+		Dog& operator=(const Dog& other);
+		
 		void	makeSound() const;
 };

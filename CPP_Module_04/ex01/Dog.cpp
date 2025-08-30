@@ -6,31 +6,35 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:32:05 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/30 10:51:36 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/30 12:30:54 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Animal.hpp"
+#include "Brain.hpp"
 #include <iostream>
 
-Dog::Dog() {
+Dog::Dog() : Brains(new Brain()) {
 	type = "Dog";
 	std::cout << "Default Constructor is Called From (Dog object)" << std::endl;
 }
 
 Dog::~Dog() {
+	delete Brains;
 	std::cout << "Destructor is Called Form (Dog Object)" << std::endl;
 }
 
-Dog::Dog(const Dog& other) : Animal(other) {
+Dog::Dog(const Dog& other) : Animal(other), Brains( new Brain(*other.Brains)) {
 	std::cout << "Copy Constructor is Called From (Dog Object)" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& other) {
 	if (this != &other) {
-		Animal::operator=(other);
+		type = other.type;
+		*Brains = *other.Brains;
 	}
+	std::cout << "Copy Assignment Opertor is Called From (Dog Object)" << std::endl;
 	return *this;
 }
 

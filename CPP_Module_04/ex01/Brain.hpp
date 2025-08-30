@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/29 11:33:51 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/29 15:50:21 by aben-chr         ###   ########.fr       */
+/*   Created: 2025/08/30 11:16:11 by aben-chr          #+#    #+#             */
+/*   Updated: 2025/08/30 11:22:23 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include <string>
+#define IDS 100
 
-class Cat : public Animal {
+class Brain {
 	public:
-		Cat();
-		~Cat();
-		Cat(const Cat& other);
-		Cat& operator=(const Cat& other);
+		Brain();
+		~Brain();
+		Brain(const Brain& other);
+		Brain& operator=(const Brain& other);
 
-		void	makeSound() const;
+		std::string	ideas[IDS];
 };

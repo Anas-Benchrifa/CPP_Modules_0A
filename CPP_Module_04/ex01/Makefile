@@ -6,13 +6,14 @@
 #    By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/29 15:41:49 by aben-chr          #+#    #+#              #
-#    Updated: 2025/08/29 15:45:00 by aben-chr         ###   ########.fr        #
+#    Updated: 2025/08/30 12:36:42 by aben-chr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Animals
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+
 
 CC = c++
 
@@ -32,6 +33,9 @@ run: $(NAME)
 	@clear
 	./$(NAME)
 		
+leaks: $(NAME)
+	leaks --atExit -- ./$(NAME)
+
 clean:
 	rm -f $(OBJ)
 
@@ -40,4 +44,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re run
+.PHONY: all clean fclean re run leaks
