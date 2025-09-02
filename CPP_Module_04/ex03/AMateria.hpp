@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 13:34:04 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/30 13:29:56 by aben-chr         ###   ########.fr       */
+/*   Created: 2025/08/31 14:55:36 by aben-chr          #+#    #+#             */
+/*   Updated: 2025/08/31 15:57:50 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 #include <string>
 
-class Animal {
-	protected:
-		std::string type;
-	public:
-		Animal();
-		Animal(const Animal& other);
-		virtual ~Animal();
+class ICharacter;
 
-		Animal&	operator=(const Animal& other);
-		const	std::string getType() const;
-		virtual	void	makeSound() const = 0;
+class AMateria {
+	protected:
+		std::string	type;
+	public:
+		AMateria(const std::string& type);
+		virtual ~AMateria(void);
+
+		virtual const std::string&	getType(void) const;
+		virtual AMateria*			clone() const = 0;
+		virtual void				use(ICharacter& target) = 0;
 };

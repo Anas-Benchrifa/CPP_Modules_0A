@@ -6,46 +6,26 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 15:37:18 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/30 13:26:31 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/31 11:56:29 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include <iostream>
 #include "Animal.hpp"
-#include "WrongCat.hpp"
-#include "WrongAnimal.hpp"
 
-int main()
-{
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+int main() {
 	
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
-	
-	delete meta;
-	delete j;
-	delete i;
+	const Animal* dog = new Dog();
+	const Animal* cat = new Cat();
 
-	std::cout << "*** Test WrongAnimal ***" << std::endl;
-	{
-		const WrongAnimal* meta = new WrongAnimal();
-		const WrongAnimal* j = new WrongCat();
+	dog->makeSound();
+	cat->makeSound();
 
-		std::cout << j->getType() << " " << std::endl;
+	delete dog;
+	delete cat;
 
-		meta->makeSound();
-		j->makeSound();
+	// const Animal* animal = new Animal(); // ERROR: Cannot instantiate abstract class
 
-		delete meta;
-		delete j;
-	} 
 	return 0;
 }

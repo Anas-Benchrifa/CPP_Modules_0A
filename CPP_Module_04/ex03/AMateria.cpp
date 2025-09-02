@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 13:34:04 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/30 13:29:56 by aben-chr         ###   ########.fr       */
+/*   Created: 2025/08/31 14:58:45 by aben-chr          #+#    #+#             */
+/*   Updated: 2025/08/31 15:58:00 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "AMateria.hpp"
+#include <iostream>
 
-#include <string>
+AMateria::AMateria(const std::string& type) : type(type) {
+	std::cout << "AMateria " << type << " created" << std::endl;
+}
 
-class Animal {
-	protected:
-		std::string type;
-	public:
-		Animal();
-		Animal(const Animal& other);
-		virtual ~Animal();
+AMateria::~AMateria(void) {
+	std::cout << "AMateria " << type << " destroyed" << std::endl;
+}
 
-		Animal&	operator=(const Animal& other);
-		const	std::string getType() const;
-		virtual	void	makeSound() const = 0;
-};
+const std::string& AMateria::getType(void) const {
+	return type;
+}

@@ -6,7 +6,7 @@
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 13:32:05 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/30 13:22:16 by aben-chr         ###   ########.fr       */
+/*   Updated: 2025/08/31 15:55:36 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,5 @@ Dog& Dog::operator=(const Dog& other) {
 
 void	Dog::makeSound() const {
 	std::cout << "* Woof! Woof! *" << std::endl;
+
 }

@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-chr <aben-chr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/27 13:34:04 by aben-chr          #+#    #+#             */
-/*   Updated: 2025/08/30 13:29:56 by aben-chr         ###   ########.fr       */
+/*   Created: 2025/08/29 11:33:51 by aben-chr          #+#    #+#             */
+/*   Updated: 2025/08/31 15:51:49 by aben-chr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class Animal {
-	protected:
-		std::string type;
+class Cat : public Animal {
+	private:
+		Brain*	Brains;
 	public:
-		Animal();
-		Animal(const Animal& other);
-		virtual ~Animal();
+		Cat();
+		~Cat();
+		Cat(const Cat& other);
+		Cat& operator=(const Cat& other);
 
-		Animal&	operator=(const Animal& other);
-		const	std::string getType() const;
-		virtual	void	makeSound() const = 0;
+		void	makeSound() const;
 };
